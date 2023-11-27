@@ -1,0 +1,27 @@
+---
+
+---
+
+<button class="page-top-jump" type="button">PageTopJump</button>
+
+<style lang="scss">
+  @use "../styles/colors" as *;
+
+  .page-top-jump {
+    padding: 1em 2em;
+    background-color: $color-text;
+    color: $color-white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  import { scrollToTop } from "../scripts/smoothScroll";
+
+  const $pageTopJump: HTMLElement | null =
+    document.querySelector(".page-top-jump");
+
+  $pageTopJump?.addEventListener("click", () => {
+    scrollToTop();
+  });
+</script>
